@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rossi Beauty Boutique — Centro Estetico a Ravenna</title>
+    <meta name="description" content="Centro estetico boutique a Ravenna. Trattamenti viso e corpo, epilazione, massaggi, manicure, percorsi sposa e ritual spa. Esperienza familiare dal 1952, con protocolli moderni e personalizzati.">
+    <meta name="keywords" content="centro estetico Ravenna, trattamenti viso, trattamenti corpo, epilazione, massaggi, manicure pedicure, sposa, beauty boutique">
+    <meta property="og:title" content="Rossi Beauty Boutique — Centro Estetico a Ravenna">
+    <meta property="og:description" content="Bellezza su misura, a Ravenna. Trattamenti viso e corpo, estetica avanzata e benessere in un ambiente curato.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TOP BAR                                     -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="top-bar" id="top-bar">
+        <div class="top-bar__inner">
+            <div class="top-bar__contacts">
+                <a href="tel:+390544000000" class="top-bar__item" id="topbar-phone">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>0544 000 000</span>
+                </a>
+                <a href="mailto:info@rossibeautyboutique.it" class="top-bar__item" id="topbar-email">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span>info@rossibeautyboutique.it</span>
+                </a>
+                <button class="top-bar__item top-bar__copy-btn" id="topbar-address" onclick="copyAddress()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Via Roma 42, 48121 Ravenna</span>
+                    <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- NAVBAR                                      -->
+    <!-- ═══════════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="#hero" class="navbar__logo" id="nav-logo">
+                <img src="immagini per estetiste/estetica logo1.png" alt="Rossi Beauty Boutique" class="navbar__logo-img">
+            </a>
+            <ul class="navbar__menu" id="nav-menu">
+                <li><a href="#hero" class="navbar__link active" data-section="hero">Home</a></li>
+                <li><a href="#trattamenti" class="navbar__link" data-section="trattamenti">Trattamenti</a></li>
+                <li><a href="#risultati" class="navbar__link" data-section="risultati">Risultati</a></li>
+                <li><a href="#contatti" class="navbar__link" data-section="contatti">Contatti</a></li>
+            </ul>
+            <button class="navbar__hamburger" id="nav-hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-menu__list">
+            <li><a href="#hero" class="mobile-menu__link" data-section="hero">Home</a></li>
+            <li><a href="#trattamenti" class="mobile-menu__link" data-section="trattamenti">Trattamenti</a></li>
+            <li><a href="#risultati" class="mobile-menu__link" data-section="risultati">Risultati</a></li>
+            <li><a href="#contatti" class="mobile-menu__link" data-section="contatti">Contatti</a></li>
+        </ul>
+        <div class="mobile-menu__cta">
+            <a href="tel:+390544000000" class="btn btn--gold">Chiama ora</a>
+            <a href="mailto:info@rossibeautyboutique.it" class="btn btn--outline">Scrivici</a>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SEZIONE 1 — HERO                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero__image-placeholder">
+            <img src="immagini per estetiste/estetica home.png" alt="Rossi Beauty Boutique — Centro estetico a Ravenna" loading="eager">
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <h1 class="hero__title">Bellezza su misura,<br>a Ravenna.</h1>
+            <p class="hero__subtitle">Trattamenti viso e corpo, estetica avanzata e benessere<br>in un ambiente curato, con protocolli personalizzati.</p>
+            <div class="hero__ctas">
+                <a href="tel:+390544000000" class="btn btn--gold" id="hero-cta-call">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Chiama ora
+                </a>
+                <a href="mailto:info@rossibeautyboutique.it" class="btn btn--outline-light" id="hero-cta-write">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    Scrivici
+                </a>
+                <a href="https://maps.google.com/?q=Via+Roma+42+Ravenna" target="_blank" rel="noopener" class="btn btn--outline-light" id="hero-cta-map">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Apri la mappa
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SEZIONE 3 — TRATTAMENTI                    -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="trattamenti" id="trattamenti">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">I nostri trattamenti</span>
+                <h2 class="section-title">Ogni trattamento,<br>un percorso dedicato.</h2>
+                <p class="section-desc">Dalla cura del viso al benessere del corpo: protocolli personalizzati e tecniche selezionate per risultati progressivi e visibili.</p>
+            </div>
+
+            <div class="trattamenti__grid">
+                <!-- Card 1 -->
+                <div class="trattamento-card" id="treat-viso">
+                    <div class="trattamento-card__image">
+                        <img src="immagini per estetiste/estetica viso.png" alt="Trattamenti viso" loading="lazy">
+                    </div>
+                    <div class="trattamento-card__body">
+                        <h3>Trattamenti viso</h3>
+                        <p>Detersione profonda, glow, anti-age e protocolli per pelli sensibili. Ogni percorso inizia con un'analisi attenta della pelle.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="trattamento-card" id="treat-corpo">
+                    <div class="trattamento-card__image">
+                        <img src="immagini per estetiste/estetica drenante.png" alt="Trattamenti corpo" loading="lazy">
+                    </div>
+                    <div class="trattamento-card__body">
+                        <h3>Trattamenti corpo</h3>
+                        <p>Tonificazione, drenante e rimodellante. Trattamenti studiati per valorizzare la naturalezza del corpo con risultati progressivi.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="trattamento-card" id="treat-epilazione">
+                    <div class="trattamento-card__image">
+                        <img src="immagini per estetiste/estetica ceretta.png" alt="Epilazione" loading="lazy">
+                    </div>
+                    <div class="trattamento-card__body">
+                        <h3>Epilazione</h3>
+                        <p>Ceretta tradizionale e tecnologie selezionate per l'epilazione avanzata, con protocolli personalizzati per ogni tipo di pelle.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="trattamento-card" id="treat-massaggi">
+                    <div class="trattamento-card__image">
+                        <img src="immagini per estetiste/estetica massaggi.png" alt="Massaggi benessere" loading="lazy">
+                    </div>
+                    <div class="trattamento-card__body">
+                        <h3>Massaggi benessere</h3>
+                        <p>Relax, decontratturante e linfodrenante. Un momento dedicato al benessere, con tecniche manuali e pressioni calibrate.</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="trattamento-card" id="treat-manicure">
+                    <div class="trattamento-card__image">
+                        <img src="immagini per estetiste/estetica mani .jpeg" alt="Manicure e Pedicure" loading="lazy">
+                    </div>
+                    <div class="trattamento-card__body">
+                        <h3>Manicure & Pedicure</h3>
+                        <p>Trattamento curativo ed estetico di mani e piedi. Cura delle unghie, idratazione e smalto semipermanente professionale.</p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="trattamento-card" id="treat-sguardo">
+                    <div class="trattamento-card__image">
+                        <img src="immagini per estetiste/estetica ciglia.png" alt="Sopracciglia e Sguardo" loading="lazy">
+                    </div>
+                    <div class="trattamento-card__body">
+                        <h3>Sopracciglia & Sguardo</h3>
+                        <p>Laminazione, tinta e definizione dello sguardo. Interventi mirati per valorizzare l'espressività del viso in modo naturale.</p>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="trattamento-card" id="treat-ritual">
+                    <div class="trattamento-card__image">
+                        <img src="immagini per estetiste/estetica spa.jpeg" alt="Ritual e Percorsi spa" loading="lazy">
+                    </div>
+                    <div class="trattamento-card__body">
+                        <h3>Ritual & Percorsi spa</h3>
+                        <p>Esperienze sensoriali complete: scrub, impacchi, percorsi rilassanti. Un viaggio nel benessere per corpo e mente.</p>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="trattamento-card" id="treat-bridal">
+                    <div class="trattamento-card__image">
+                        <img src="immagini per estetiste/estetica sposa.png" alt="Bridal / Eventi" loading="lazy">
+                    </div>
+                    <div class="trattamento-card__body">
+                        <h3>Bridal / Eventi</h3>
+                        <p>Preparazione sposa, skincare pre-evento e make-up naturale. Un percorso dedicato per arrivare al giorno speciale al meglio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROMO / PACCHETTI -->
+            <div class="promo-block">
+                <div class="promo-block__header">
+                    <h3 class="promo-block__title">Pacchetti & Promozioni</h3>
+                    <p class="promo-block__desc">Esperienze pensate per rendere speciali i momenti più importanti.</p>
+                </div>
+                <div class="promo-block__grid">
+                    <!-- Promo 1 -->
+                    <div class="promo-card" id="promo-mese">
+                        <div class="promo-card__image">
+                            <img src="immagini per estetiste/estetica promo mese.png" alt="Promo del mese" loading="lazy">
+                        </div>
+                        <div class="promo-card__body">
+                            <span class="promo-card__tag">Offerta attiva</span>
+                            <h4>Promo del mese</h4>
+                            <p>Un trattamento selezionato ogni mese a condizioni speciali. Contattaci per scoprire la proposta dedicata.</p>
+                            <button class="btn btn--gold-sm" onclick="openModal('modal-promo')">Scopri di più</button>
+                        </div>
+                    </div>
+                    <!-- Promo 2 -->
+                    <div class="promo-card" id="promo-sposa">
+                        <div class="promo-card__image">
+                            <img src="immagini per estetiste/estetica promo sposa.png" alt="Percorso Sposa" loading="lazy">
+                        </div>
+                        <div class="promo-card__body">
+                            <span class="promo-card__tag">Percorso dedicato</span>
+                            <h4>Percorso Sposa</h4>
+                            <p>Un programma su misura per prepararti al giorno più bello: viso, corpo, mani e relax, con tempistiche studiate.</p>
+                            <button class="btn btn--gold-sm" onclick="openModal('modal-sposa')">Scopri di più</button>
+                        </div>
+                    </div>
+                    <!-- Promo 3 -->
+                    <div class="promo-card" id="promo-birthday">
+                        <div class="promo-card__image">
+                            <img src="immagini per estetiste/estetica promo compleanno.png" alt="Beauty Birthday" loading="lazy">
+                        </div>
+                        <div class="promo-card__body">
+                            <span class="promo-card__tag">Experience</span>
+                            <h4>Beauty Birthday</h4>
+                            <p>Festeggia il tuo compleanno con un'esperienza beauty: trattamenti, relax e un momento speciale da condividere.</p>
+                            <button class="btn btn--gold-sm" onclick="openModal('modal-birthday')">Scopri di più</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SEZIONE 4 — RISULTATI / I NOSTRI LAVORI    -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="risultati" id="risultati">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Risultati</span>
+                <h2 class="section-title">I nostri lavori</h2>
+                <p class="section-desc">Una selezione dei trattamenti realizzati nel nostro centro. Scorri per scoprire i nostri lavori.</p>
+            </div>
+        </div>
+
+        <div class="gallery-wrapper">
+            <div class="gallery-scroll" id="gallery-scroll">
+                <!-- Lavoro 1 -->
+                <div class="gallery-card" id="work-1">
+                    <div class="gallery-card__image">
+                        <img src="immagini per estetiste/lavori 1 viso.jpeg" alt="Trattamento viso glow" loading="lazy">
+                    </div>
+                    <div class="gallery-card__info">
+                        <h4>Trattamento viso glow</h4>
+                        <p>Percorso luminosità con esfoliazione delicata e idratazione profonda.</p>
+                    </div>
+                </div>
+                <!-- Lavoro 2 -->
+                <div class="gallery-card" id="work-2">
+                    <div class="gallery-card__image">
+                        <img src="immagini per estetiste/lavori 2 ciglia.png" alt="Laminazione sopracciglia" loading="lazy">
+                    </div>
+                    <div class="gallery-card__info">
+                        <h4>Laminazione sopracciglia</h4>
+                        <p>Definizione dello sguardo con laminazione e tinta, effetto naturale.</p>
+                    </div>
+                </div>
+                <!-- Lavoro 3 -->
+                <div class="gallery-card" id="work-3">
+                    <div class="gallery-card__image">
+                        <img src="immagini per estetiste/lavori 3 mani.jpeg" alt="Manicure semipermanente" loading="lazy">
+                    </div>
+                    <div class="gallery-card__info">
+                        <h4>Manicure semipermanente</h4>
+                        <p>Mani curate con smalto semipermanente professionale e trattamento cuticole.</p>
+                    </div>
+                </div>
+                <!-- Lavoro 4 -->
+                <div class="gallery-card" id="work-4">
+                    <div class="gallery-card__image">
+                        <img src="immagini per estetiste/lavori 4 massaggio.jpeg" alt="Massaggio rilassante" loading="lazy">
+                    </div>
+                    <div class="gallery-card__info">
+                        <h4>Massaggio rilassante</h4>
+                        <p>Sessione di relax con tecniche manuali e oli essenziali selezionati.</p>
+                    </div>
+                </div>
+                <!-- Lavoro 5 -->
+                <div class="gallery-card" id="work-5">
+                    <div class="gallery-card__image">
+                        <img src="immagini per estetiste/lavori 5 antiage.png" alt="Trattamento anti-age" loading="lazy">
+                    </div>
+                    <div class="gallery-card__info">
+                        <h4>Trattamento anti-age</h4>
+                        <p>Percorso viso anti-età con acido ialuronico e vitamine, pelle più compatta.</p>
+                    </div>
+                </div>
+                <!-- Lavoro 6 -->
+                <div class="gallery-card" id="work-6">
+                    <div class="gallery-card__image">
+                        <img src="immagini per estetiste/lavori 6 piedi.jpg" alt="Pedicure curativa" loading="lazy">
+                    </div>
+                    <div class="gallery-card__info">
+                        <h4>Pedicure curativa</h4>
+                        <p>Trattamento completo piedi con cura unghie, scrub e idratazione profonda.</p>
+                    </div>
+                </div>
+                <!-- Lavoro 7 -->
+                <div class="gallery-card" id="work-7">
+                    <div class="gallery-card__image">
+                        <img src="immagini per estetiste/lavori 7 scrub.jpeg" alt="Ritual spa corpo" loading="lazy">
+                    </div>
+                    <div class="gallery-card__info">
+                        <h4>Ritual spa corpo</h4>
+                        <p>Esperienza sensoriale con scrub, impacco e massaggio rigenerante.</p>
+                    </div>
+                </div>
+                <!-- Lavoro 8 -->
+                <div class="gallery-card" id="work-8">
+                    <div class="gallery-card__image">
+                        <img src="immagini per estetiste/lavori 8 sposa.jpeg" alt="Percorso sposa" loading="lazy">
+                    </div>
+                    <div class="gallery-card__info">
+                        <h4>Percorso sposa</h4>
+                        <p>Preparazione completa pre-matrimonio: viso, corpo e mani impeccabili.</p>
+                    </div>
+                </div>
+                <!-- Lavoro 9 -->
+                <div class="gallery-card" id="work-9">
+                    <div class="gallery-card__image">
+                        <img src="immagini per estetiste/lavori 9 tonificazione.jpeg" alt="Tonificazione corpo" loading="lazy">
+                    </div>
+                    <div class="gallery-card__info">
+                        <h4>Tonificazione corpo</h4>
+                        <p>Trattamento modellante con bendaggi e massaggio per una silhouette più definita.</p>
+                    </div>
+                </div>
+                <!-- Lavoro 10 -->
+                <div class="gallery-card" id="work-10">
+                    <div class="gallery-card__image">
+                        <img src="immagini per estetiste/lavori 10 nail art.png" alt="Nail art creativa" loading="lazy">
+                    </div>
+                    <div class="gallery-card__info">
+                        <h4>Nail art creativa</h4>
+                        <p>Decorazioni unghie personalizzate con tecniche moderne e colori di tendenza.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Gallery navigation arrows -->
+            <button class="gallery-arrow gallery-arrow--left" id="gallery-left" aria-label="Scorri a sinistra">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="gallery-arrow gallery-arrow--right" id="gallery-right" aria-label="Scorri a destra">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CHI SIAMO                                   -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="chi-siamo" id="chi-siamo">
+        <div class="container">
+            <div class="chi-siamo__grid">
+                <div class="chi-siamo__image-col">
+                    <div class="chi-siamo__image-placeholder">
+                        <img src="immagini per estetiste/estetica lavoratrici team.jpeg" alt="Il team di Rossi Beauty Boutique" loading="lazy">
+                    </div>
+                </div>
+                <div class="chi-siamo__text-col">
+                    <span class="section-tag">Chi siamo</span>
+                    <h2 class="section-title">Un'esperienza familiare,<br>dal 1952.</h2>
+                    <p class="chi-siamo__lead">Rossi Beauty Boutique nasce dalla passione per la cura della persona, tramandata di generazione in generazione. Quello che nel 1952 era un piccolo laboratorio di bellezza nel cuore di Ravenna, oggi è un centro estetico moderno e accogliente, dove tradizione e innovazione si incontrano.</p>
+                    <p>Ogni trattamento è un percorso pensato su misura: partiamo sempre da un'attenta consulenza per comprendere le reali esigenze di chi si affida a noi. Lavoriamo con protocolli aggiornati, prodotti selezionati e un'attenzione costante all'igiene e alla sicurezza degli ambienti.</p>
+                    <p>Il nostro obiettivo è semplice: offrire risultati visibili, in un contesto professionale e rilassante, a Ravenna e in tutta la Romagna.</p>
+                    <div class="chi-siamo__badges">
+                        <div class="badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>Protocolli su misura</span>
+                        </div>
+                        <div class="badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>Ambienti sanificati</span>
+                        </div>
+                        <div class="badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <span>Tecniche aggiornate</span>
+                        </div>
+                        <div class="badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <span>Percorsi progressivi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SEZIONE 5 — AFFIDABILITÀ                   -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="affidabilita" id="affidabilita">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Perché sceglierci</span>
+                <h2 class="section-title">Il nostro metodo di lavoro</h2>
+            </div>
+
+            <div class="affidabilita__pillole">
+                <div class="pillola">
+                    <div class="pillola__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h4>Consulenza iniziale</h4>
+                    <p>Ogni percorso parte da un colloquio per capire le tue esigenze reali e definire un programma adatto.</p>
+                </div>
+                <div class="pillola">
+                    <div class="pillola__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h4>Igiene e sicurezza</h4>
+                    <p>Ambienti sanificati, strumenti monouso o sterilizzati, protocolli rigorosi per la tua tranquillità.</p>
+                </div>
+                <div class="pillola">
+                    <div class="pillola__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                    </div>
+                    <h4>Percorsi personalizzati</h4>
+                    <p>Nessun approccio uguale per tutti: ogni trattamento viene calibrato sulla persona e sui suoi obiettivi.</p>
+                </div>
+                <div class="pillola">
+                    <div class="pillola__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <h4>Prodotti selezionati</h4>
+                    <p>Utilizziamo esclusivamente cosmetici professionali testati, scelti per efficacia e tollerabilità cutanea.</p>
+                </div>
+                <div class="pillola">
+                    <div class="pillola__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <h4>Approccio graduale</h4>
+                    <p>Crediamo nei risultati costruiti nel tempo: percorsi progressivi, senza forzature né promesse irrealistiche.</p>
+                </div>
+                <div class="pillola">
+                    <div class="pillola__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h4>Follow-up consigliato</h4>
+                    <p>Al termine di ogni percorso, consigliamo un piano di mantenimento per preservare i risultati ottenuti.</p>
+                </div>
+            </div>
+
+            <div class="affidabilita__come-lavoriamo">
+                <div class="come-lavoriamo__content">
+                    <h3>Come lavoriamo</h3>
+                    <p>Nel nostro centro ogni appuntamento inizia con un momento di ascolto. Valutiamo insieme la condizione della pelle o della zona da trattare, definiamo aspettative realistiche e proponiamo un percorso coerente con i tuoi obiettivi. Durante il trattamento lavoriamo in cabine riservate, con strumentazione professionale e prodotti selezionati. Al termine, condividiamo indicazioni pratiche per il mantenimento a casa e, se necessario, programmiamo le sedute successive.</p>
+                    <p>Non promettiamo miracoli: offriamo competenza, precisione e un ambiente dove sentirti a tuo agio.</p>
+                </div>
+                <div class="come-lavoriamo__image">
+                    <div class="come-lavoriamo__image-placeholder">
+                        <img src="immagini per estetiste/estetica oggetti.jpeg" alt="Strumenti e prodotti professionali" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SEZIONE 6 — CONTATTI                       -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="contatti" id="contatti">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contatti</span>
+                <h2 class="section-title">Vieni a trovarci</h2>
+                <p class="section-desc">Siamo a Ravenna, nel cuore della Romagna. Prenota il tuo appuntamento o vieni a conoscerci.</p>
+            </div>
+
+            <div class="contatti__grid">
+                <div class="contatti__cards">
+                    <!-- Riga 1: Telefono + Email -->
+                    <div class="contatti-card">
+                        <div class="contatti-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <h4>Telefono</h4>
+                        <a href="tel:+390544000000" class="contatti__link">0544 000 000</a>
+                    </div>
+                    <div class="contatti-card">
+                        <div class="contatti-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <h4>Email</h4>
+                        <a href="mailto:info@rossibeautyboutique.it" class="contatti__link">info@rossibeautyboutique.it</a>
+                    </div>
+                    <!-- Riga 2: Indirizzo + Orari -->
+                    <div class="contatti-card">
+                        <div class="contatti-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <h4>Indirizzo</h4>
+                        <p>Via Roma 42, 48121 Ravenna (RA)</p>
+                        <button class="btn btn--outline-sm" onclick="copyAddress()" id="contact-copy-address">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            Copia indirizzo
+                        </button>
+                    </div>
+                    <div class="contatti-card">
+                        <div class="contatti-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h4>Orari</h4>
+                        <p>Lun — Ven: 9:00 – 19:00</p>
+                        <p>Sabato: 9:00 – 17:00</p>
+                        <p>Domenica: chiuso</p>
+                    </div>
+                </div>
+
+                <!-- Area servita -->
+                <p class="contatti__area">Area servita: Ravenna e tutta la Romagna</p>
+
+                <!-- CTA centrate -->
+                <div class="contatti__ctas">
+                    <a href="tel:+390544000000" class="btn btn--gold" id="contact-cta-call">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Chiama ora
+                    </a>
+                    <a href="mailto:info@rossibeautyboutique.it" class="btn btn--outline" id="contact-cta-write">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Scrivici
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SEZIONE 7 — FOOTER                         -->
+    <!-- ═══════════════════════════════════════════ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <img src="immagini per estetiste/estetica logo1.png" alt="Rossi Beauty Boutique" class="footer__logo-img">
+                    </div>
+                    <p class="footer__tagline">Centro estetico boutique a Ravenna.<br>Bellezza su misura, dal 1952.</p>
+
+                </div>
+
+                <div class="footer__links">
+                    <h4>Link rapidi</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#trattamenti">Trattamenti</a></li>
+                        <li><a href="#risultati">Risultati</a></li>
+                        <li><a href="#contatti">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__contact">
+                    <h4>Contatti</h4>
+                    <p>
+                        <a href="tel:+390544000000">0544 000 000</a><br>
+                        <a href="mailto:info@rossibeautyboutique.it">info@rossibeautyboutique.it</a><br>
+                        Via Roma 42, 48121 Ravenna (RA)
+                    </p>
+                    <p class="footer__hours">
+                        Lun-Ven 9:00–19:00 · Sab 9:00–17:00
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__disclaimer">Sito realizzato a scopo dimostrativo per un'azienda fittizia.</p>
+                <p class="footer__copyright">&copy; 2026 Rossi Beauty Boutique — Ravenna. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- MODALI (Promo / Pacchetti)                  -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="modal-overlay" id="modal-promo">
+        <div class="modal">
+            <button class="modal__close" onclick="closeModal('modal-promo')" aria-label="Chiudi">&times;</button>
+            <h3>Promo del mese</h3>
+            <p>Ogni mese selezioniamo un trattamento o un pacchetto combinato a condizioni speciali. La promozione attiva viene comunicata sui nostri canali social e direttamente in studio.</p>
+            <p>Contattaci per scoprire l'offerta del momento e verificare la disponibilità.</p>
+            <div class="modal__ctas">
+                <a href="tel:+390544000000" class="btn btn--gold">Chiama ora</a>
+                <a href="mailto:info@rossibeautyboutique.it" class="btn btn--outline">Scrivici</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-sposa">
+        <div class="modal">
+            <button class="modal__close" onclick="closeModal('modal-sposa')" aria-label="Chiudi">&times;</button>
+            <h3>Percorso Sposa</h3>
+            <p>Un programma completo e personalizzato per arrivare al giorno del matrimonio con una pelle luminosa e un aspetto curato. Il percorso include:</p>
+            <ul>
+                <li>Consulenza iniziale e analisi della pelle</li>
+                <li>Ciclo di trattamenti viso (idratazione, luminosità, anti-stress)</li>
+                <li>Trattamento corpo (scrub, idratazione, tonificazione)</li>
+                <li>Manicure e pedicure con semipermanente</li>
+                <li>Seduta relax pre-cerimonia</li>
+            </ul>
+            <p>Consigliamo di iniziare il percorso almeno 2-3 mesi prima dell'evento. Contattaci per un colloquio personalizzato.</p>
+            <div class="modal__ctas">
+                <a href="tel:+390544000000" class="btn btn--gold">Chiama ora</a>
+                <a href="mailto:info@rossibeautyboutique.it" class="btn btn--outline">Scrivici</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-birthday">
+        <div class="modal">
+            <button class="modal__close" onclick="closeModal('modal-birthday')" aria-label="Chiudi">&times;</button>
+            <h3>Beauty Birthday</h3>
+            <p>Festeggia il tuo compleanno con un'esperienza di benessere unica. Un momento speciale da vivere da sola o con le amiche, nel nostro centro.</p>
+            <p>Il pacchetto Birthday può includere:</p>
+            <ul>
+                <li>Trattamento viso glow o relax</li>
+                <li>Mini-massaggio rilassante</li>
+                <li>Manicure express</li>
+                <li>Tisana e piccola coccola di benvenuto</li>
+            </ul>
+            <p>Contattaci per personalizzare la tua esperienza e scegliere la data ideale.</p>
+            <div class="modal__ctas">
+                <a href="tel:+390544000000" class="btn btn--gold">Chiama ora</a>
+                <a href="mailto:info@rossibeautyboutique.it" class="btn btn--outline">Scrivici</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast">Indirizzo copiato!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
